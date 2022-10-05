@@ -10,6 +10,7 @@ public class PlayerMovment : MonoBehaviour
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxCollider;
+    private CircleCollider2D circleCollider;
     private float wallJumpCooldown;
     private float horizontalInput;
 
@@ -20,6 +21,7 @@ public class PlayerMovment : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        circleCollider = GetComponent<CircleCollider2D>();
     }
 
     private void Update()
@@ -80,9 +82,9 @@ public class PlayerMovment : MonoBehaviour
 
     private bool isGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        //RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        RaycastHit2D raycastHit = Physics2D.CircleCast(circleCollider.bounds.center, circleCollider.radius, Vector2.down, 0.4f, groundLayer);
         return raycastHit.collider != null;
-
     }    
     private bool onWall()
     {

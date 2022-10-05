@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 11088
+  controlID: 11446
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 11089
+  controlID: 11447
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 11090
+  controlID: 11448
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: aa5f0000
-      m_LastClickedID: 24490
-      m_ExpandedIDs: 26fbffff8a5f0000aa5f0000cc5f0000
+      m_SelectedIDs: 985f0000
+      m_LastClickedID: 24472
+      m_ExpandedIDs: 26fbffff7a5f00008a5f0000aa5f0000cc5f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -524,9 +524,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.578551, y: 0.7400584, z: -0.05095401}
+    m_Target: {x: -4.7691655, y: -0.24832961, z: -0.01307693}
     speed: 2
-    m_Value: {x: 6.578551, y: 0.7400584, z: -0.05095401}
+    m_Value: {x: -4.7691655, y: -0.24832961, z: -0.01307693}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -577,9 +577,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.792086
+    m_Target: 1.1703106
     speed: 2
-    m_Value: 4.792086
+    m_Value: 1.1703106
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -674,22 +674,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Items
+    - Assets/Scripts/Health
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites/Items
+  - Assets/Scripts/Health
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Projects\Unity\Platformer2D
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 2a640000
-    m_LastClickedID: 25642
-    m_ExpandedIDs: 00000000b0630000b4630000d0630000d4630000d6630000de6300000a64000010640000146400002e640000fa8100001a82000024820000
+    m_SelectedIDs: ce630000
+    m_LastClickedID: 25550
+    m_ExpandedIDs: 00000000b0630000b2630000b4630000d4630000d6630000de6300000a64000010640000146400002e640000fa8100001a82000024820000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -742,9 +742,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: aa5f0000
-    m_LastClickedInstanceID: 24490
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 985f0000
+    m_LastClickedInstanceID: 24472
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300003e60000000000000fc810000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -831,7 +831,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 24490
+  m_LastSelectedObjectID: 24472
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -898,9 +898,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: df4f0add55985034b961abe75ab9dcba, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 5891991c108e1f342b5c249155e3684b, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -7005533555981861451, guid: df4f0add55985034b961abe75ab9dcba, type: 2}
+  - m_Target: {fileID: -4318224155033396118, guid: 5891991c108e1f342b5c249155e3684b, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_Zoom: -1
   m_ScrollPosition: {x: 0, y: 0}
   m_SelectedObject: {fileID: 0}
-  m_SelectedSpriteRectGUID: 00000000000000000000000000000000
+  m_SelectedSpriteRectGUID: 28af876736d63f1d0800000000000000
   m_LastUsedModuleTypeName: 
 --- !u!114 &17
 MonoBehaviour:
