@@ -23,6 +23,7 @@ public class Health : MonoBehaviour
         if (currentHealth > 0)
         {
             anim.SetTrigger("hurt");
+
         }
         else
         {
@@ -43,5 +44,10 @@ public class Health : MonoBehaviour
         {
             TakeDamage(1);
         }
+    }
+
+    public void AddHealth(float _value)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
 }
