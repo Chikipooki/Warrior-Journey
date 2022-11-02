@@ -14,6 +14,8 @@ public class PlayerMovment : MonoBehaviour
     private float wallJumpCooldown;
     private float horizontalInput;
 
+    public Joystick joystick;
+
 
     private void Awake()
     {
@@ -26,7 +28,7 @@ public class PlayerMovment : MonoBehaviour
 
     private void Update()
     {
-         horizontalInput = Input.GetAxis("Horizontal");
+         horizontalInput = joystick.Horizontal;
 
         // Flip player when mooving left-right
         if (horizontalInput > 0.01f)
