@@ -61,14 +61,23 @@ public class PlayerMovment : MonoBehaviour
             wallJumpCooldown += Time.deltaTime;
     }
 
-    private void Jump()
+    public void OnJumpButtonDown()
     {
         if (isGrounded())
         {
             body.velocity = new Vector2(body.velocity.x, jumpPower);
             anim.SetTrigger("jump");
         }
-        else if (onWall() && !isGrounded())
+    }
+
+    private void Jump()
+    {
+        //if (isGrounded())
+        //{
+        //    body.velocity = new Vector2(body.velocity.x, jumpPower);
+        //    anim.SetTrigger("jump");
+        //}
+        if (onWall() && !isGrounded())
         {
             if(horizontalInput == 0)
             {

@@ -30,6 +30,10 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void Play()
+    {
+        SceneManager.LoadScene(1);
+    }
 
 
 }

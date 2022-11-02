@@ -17,13 +17,13 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && coolDownTimer > attackCooldown && playerMovment.canAttack())
+        if (Input.GetKey(KeyCode.D) && coolDownTimer > attackCooldown && playerMovment.canAttack())
             Attack();
 
         coolDownTimer += Time.deltaTime;
     }
 
-    private void Attack()
+    public void Attack()
     {
         anim.SetTrigger("attack");
         coolDownTimer = 0;
