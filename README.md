@@ -22,4 +22,4 @@ Space -  Прыжок.
 Space -  Jump.
 
 # Игровой процесс / Game play
-[![Warrior-Journey.gif](https://i.postimg.cc/m2dVvfS6/Warrior-Journey.gif)](https://postimg.cc/N5H1XnS1)
+![Alt Text](https://postimg.cc/N5H1XnS1)
