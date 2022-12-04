@@ -23,4 +23,4 @@ Space -  Jump.
 
 # Игровой процесс / Game play
 <!--Gif-->
-![Alt Text](https://i.ibb.co/MDz5pxV/Warrior-Journey.gif)
+![Description](https://i.ibb.co/MDz5pxV/Warrior-Journey.gif)
