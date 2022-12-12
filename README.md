@@ -1,4 +1,4 @@
-# <Center>Warrior Journey</Center>
+# Warrior Journey
 <h2> Описание / Description </h2>
 [RUS] 2D игра разработанная на движке Unity.
 
@@ -23,5 +23,5 @@ Space -  Jump.
 
 # Игровой процесс / Game play
 <!--Gif-->
-![Alt Text](https://i.yapx.cc/VEjPq.gif)
+![Alt Text](https://giant.gfycat.com/SlowTangibleHammerheadbird.mp4)
 

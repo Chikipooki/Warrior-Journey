@@ -13,7 +13,6 @@ public class PlayerMovment : MonoBehaviour
     private CircleCollider2D circleCollider;
     private float wallJumpCooldown;
     private float horizontalInput;
-
     public Joystick joystick;
 
 
@@ -28,7 +27,9 @@ public class PlayerMovment : MonoBehaviour
 
     private void Update()
     {
-         horizontalInput = joystick.Horizontal;
+        //horizontalInput = joystick.Horizontal;
+        horizontalInput = Input.GetAxis("Horizontal");
+
 
         // Flip player when mooving left-right
         if (horizontalInput > 0.01f)
@@ -61,22 +62,22 @@ public class PlayerMovment : MonoBehaviour
             wallJumpCooldown += Time.deltaTime;
     }
 
-    public void OnJumpButtonDown()
+    //public void OnJumpButtonDown()
+    //{
+    //    if (isGrounded())
+    //    {
+    //        body.velocity = new Vector2(body.velocity.x, jumpPower);
+    //        anim.SetTrigger("jump");
+    //    }
+    //}
+
+    private void Jump()
     {
         if (isGrounded())
         {
             body.velocity = new Vector2(body.velocity.x, jumpPower);
             anim.SetTrigger("jump");
         }
-    }
-
-    private void Jump()
-    {
-        //if (isGrounded())
-        //{
-        //    body.velocity = new Vector2(body.velocity.x, jumpPower);
-        //    anim.SetTrigger("jump");
-        //}
         if (onWall() && !isGrounded())
         {
             if(horizontalInput == 0)
@@ -93,7 +94,6 @@ public class PlayerMovment : MonoBehaviour
 
     private bool isGrounded()
     {
-        //RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         RaycastHit2D raycastHit = Physics2D.CircleCast(circleCollider.bounds.center, circleCollider.radius, Vector2.down, 0.4f, groundLayer);
         return raycastHit.collider != null;
     }    
