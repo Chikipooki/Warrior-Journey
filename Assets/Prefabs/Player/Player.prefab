@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 8205495029715699227}
   - component: {fileID: 1835148247299863099}
   - component: {fileID: 1835148247299863108}
-  - component: {fileID: 1835148247299863110}
   - component: {fileID: 1835148247299863098}
   m_Layer: 6
   m_Name: Player
@@ -253,21 +252,10 @@ MonoBehaviour:
   startingHealth: 3
   components:
   - {fileID: 1835148247299863099}
-  - {fileID: 0}
+  - {fileID: 8205495029715699227}
+  - {fileID: 7840880265960946833}
   iFramesDuration: 2
   numberOfFlashes: 3
---- !u!114 &1835148247299863110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835148247299863100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea0320f77fddce14fa669bf6584549ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1835148247299863098
 Animator:
   serializedVersion: 4
@@ -343,7 +331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9050348532904494066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.083, y: -0.204, z: 0.0021008465}
+  m_LocalPosition: {x: -0.089, y: -0.182, z: 0.0021008465}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []

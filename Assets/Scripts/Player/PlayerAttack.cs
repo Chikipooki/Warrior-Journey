@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.D) && coolDownTimer > attackCooldown && playerMovment.canAttack())
+        if (Input.GetKey(KeyCode.D) && coolDownTimer > attackCooldown /*&& playerMovment.canAttack()*/)
             Attack();
 
         coolDownTimer += Time.deltaTime;
