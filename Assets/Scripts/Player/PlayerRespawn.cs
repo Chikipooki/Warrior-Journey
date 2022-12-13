@@ -12,8 +12,6 @@ public class PlayerRespawn : MonoBehaviour
     {
         playerHealth = GetComponent<Health>();
         uiManager = FindObjectOfType<UIManager>();
-        
-
     }
 
     public void CheckRespawn()
@@ -23,7 +21,6 @@ public class PlayerRespawn : MonoBehaviour
             uiManager.GameOver();
             return;
         }
-
         playerHealth.Respawn();
         transform.position = currentCheckpoint.position;
     }
