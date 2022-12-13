@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour
-{
+
+{   private new Rigidbody2D rigidbody2D;
+    private UIManager uiManager;
+
     [Header("Health")]
     [SerializeField] private float startingHealth;
     private Animator anim;
@@ -25,6 +28,8 @@ public class Health : MonoBehaviour
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        uiManager = FindObjectOfType<UIManager>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     public void TakeDamage(float _damage)
@@ -44,9 +49,11 @@ public class Health : MonoBehaviour
                 foreach (Behaviour component in components)
                     component.enabled = false;
 
-                anim.SetBool("grounded", true);
+                anim.SetBool("Grounded", true);
                 anim.SetTrigger("die");
                 dead = true;
+                rigidbody2D.velocity = Vector2.zero;
+                uiManager.GameOver();
             }
         }
     }
@@ -57,16 +64,16 @@ public class Health : MonoBehaviour
 
     public void Respawn()
     {
+        
         dead = false;
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
         anim.Play("Idle");
         StartCoroutine(Invunerability());
 
-        GetComponent<PlayerMovment>().enabled = true;
-
         foreach (Behaviour component in components)
             component.enabled = true;
+        transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x) * 5, transform.localScale.y, transform.localScale.z);
     }
 
     private IEnumerator Invunerability()
