@@ -19,9 +19,17 @@ public class MeleeEnemy : MonoBehaviour
     private Animator anim;
     private Health playerHealth;
 
+    private EnemyPatrol enemyPatrol;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        enemyPatrol = GetComponentInParent<EnemyPatrol>();
+    }
+
+    private void OnDisable()
+    {
+        anim.SetBool("Moving", false);
     }
 
     private void Update()
@@ -38,13 +46,17 @@ public class MeleeEnemy : MonoBehaviour
                 Debug.Log("Hited");
             }
         }
+
+        if (enemyPatrol != null)
+            enemyPatrol.enabled = !PlayerInSight();
+
         
     }
 
     private bool PlayerInSight()
     {
         RaycastHit2D hit = 
-            Physics2D.BoxCast(boxCollider.bounds.center + -transform.right * range * transform.localScale.x * colliderDistance, 
+            Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * -transform.localScale.x * colliderDistance, 
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z), 
             0, Vector2.left, 0, playerLayer);
 
@@ -57,7 +69,7 @@ public class MeleeEnemy : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + -transform.right * range * transform.localScale.x * colliderDistance, 
+        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * -transform.localScale.x * colliderDistance, 
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 
