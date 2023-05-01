@@ -6,6 +6,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private float attackRange;
     [SerializeField] private int attackDamage;
+    [SerializeField] private AudioClip attackSound;
 
     [Header("Player Layer")]
     [SerializeField] private LayerMask enemyLayer;
@@ -33,6 +34,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void Attack()
     {
+        SoundManager.instance.PlaySound(attackSound);
         anim.SetTrigger("attack");
         coolDownTimer = 0;
 
