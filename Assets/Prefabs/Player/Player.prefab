@@ -240,6 +240,7 @@ MonoBehaviour:
   attackCooldown: 1
   attackRange: 1
   attackDamage: 0
+  attackSound: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -263,6 +264,7 @@ MonoBehaviour:
   - {fileID: 7840880265960946833}
   iFramesDuration: 2
   numberOfFlashes: 3
+  deathSound: {fileID: 8300000, guid: 9f07af5abd167fa46985853e20c2ce9a, type: 3}
 --- !u!95 &1835148247299863098
 Animator:
   serializedVersion: 4

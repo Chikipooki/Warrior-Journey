@@ -21,6 +21,9 @@ public class Health : MonoBehaviour
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRenderer;
 
+    [Header("Death Sound")]
+    [SerializeField] private AudioClip deathSound;
+
     public float currentHealth { get; private set; }
 
     private void Awake()
@@ -52,6 +55,7 @@ public class Health : MonoBehaviour
                 anim.SetBool("Grounded", true);
                 anim.SetTrigger("die");
                 dead = true;
+                SoundManager.instance.PlaySound(deathSound);
                 //rigidbody2D.velocity = Vector2.zero;
                 //uiManager.GameOver();
             }

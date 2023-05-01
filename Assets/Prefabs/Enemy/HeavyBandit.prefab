@@ -190,6 +190,7 @@ MonoBehaviour:
   - {fileID: 5290830623102606328}
   iFramesDuration: 0
   numberOfFlashes: 0
+  deathSound: {fileID: 8300000, guid: 9f07af5abd167fa46985853e20c2ce9a, type: 3}
 --- !u!50 &9106002161149181420
 Rigidbody2D:
   serializedVersion: 4
