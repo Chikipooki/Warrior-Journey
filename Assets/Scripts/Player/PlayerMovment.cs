@@ -12,6 +12,9 @@ public class PlayerMovment : MonoBehaviour
     public PlayerController controller;
     public Joystick joystick;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip jumpSound;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -26,6 +29,7 @@ public class PlayerMovment : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            SoundManager.instance.PlaySound(jumpSound);
             anim.SetBool("IsJumping", true);
         }
 
