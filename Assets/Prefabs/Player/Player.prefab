@@ -225,6 +225,7 @@ MonoBehaviour:
   runSpeed: 40
   controller: {fileID: 7840880265960946833}
   joystick: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: 4e349dc959014a845b9aa317d1c2b7f0, type: 3}
 --- !u!114 &1835148247299863099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +266,7 @@ MonoBehaviour:
   iFramesDuration: 2
   numberOfFlashes: 3
   deathSound: {fileID: 8300000, guid: 9f07af5abd167fa46985853e20c2ce9a, type: 3}
+  hurtSound: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
 --- !u!95 &1835148247299863098
 Animator:
   serializedVersion: 4
