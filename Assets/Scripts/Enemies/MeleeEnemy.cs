@@ -44,7 +44,7 @@ public class MeleeEnemy : MonoBehaviour
         //Attack only when player is close
         if (PlayerInSight())
         {
-            if (cooldownTimer >= attakCooldown)
+            if (cooldownTimer >= attakCooldown && playerHealth.currentHealth > 0)
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("Attack");
