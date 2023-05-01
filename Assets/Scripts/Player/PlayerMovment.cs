@@ -19,10 +19,8 @@ public class PlayerMovment : MonoBehaviour
 
     private void Update()
     {
-        //horizontalInput = joystick.Horizontal;
         horizontalMove = Input.GetAxis("Horizontal") * runSpeed;
 
-        // Set animator parametres
         anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetButtonDown("Jump"))
@@ -35,7 +33,6 @@ public class PlayerMovment : MonoBehaviour
             crouch = true;
         else if (Input.GetButtonUp("Crouch"))
             crouch = false;
-
     }
 
     private void FixedUpdate()
@@ -47,7 +44,6 @@ public class PlayerMovment : MonoBehaviour
     {
         anim.SetBool("IsJumping", false);
     }
-
     public void OnCrouching(bool isCrouching)
     {
         anim.SetBool("IsCrouching", isCrouching);

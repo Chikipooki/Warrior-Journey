@@ -16,6 +16,7 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
+    private new Rigidbody2D rigidbody2D;
     private Animator anim;
     private Health playerHealth;
 
@@ -43,7 +44,6 @@ public class MeleeEnemy : MonoBehaviour
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("Attack");
-                Debug.Log("Hited");
             }
         }
 

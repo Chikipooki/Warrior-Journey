@@ -16,6 +16,7 @@ public class EnemyPatrol : MonoBehaviour
 
     [Header("Movement parameters")]
     [SerializeField] private float speed;
+
     private Vector3 initScale;
     private bool movingLeft;
 

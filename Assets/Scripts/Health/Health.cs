@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour
-
-{   private new Rigidbody2D rigidbody2D;
+{   
+    //private new Rigidbody2D rigidbody2D;
     private UIManager uiManager;
 
     [Header("Health")]
@@ -29,7 +29,7 @@ public class Health : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         uiManager = FindObjectOfType<UIManager>();
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        //rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     public void TakeDamage(float _damage)
@@ -52,8 +52,8 @@ public class Health : MonoBehaviour
                 anim.SetBool("Grounded", true);
                 anim.SetTrigger("die");
                 dead = true;
-                rigidbody2D.velocity = Vector2.zero;
-                uiManager.GameOver();
+                //rigidbody2D.velocity = Vector2.zero;
+                //uiManager.GameOver();
             }
         }
     }
