@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1089052686951688774}
   - component: {fileID: 1835148247299863099}
   - component: {fileID: 1835148247299863108}
+  - component: {fileID: 4188083936842116867}
   - component: {fileID: 1835148247299863098}
   m_Layer: 6
   m_Name: Player
@@ -217,12 +218,24 @@ MonoBehaviour:
   startingHealth: 3
   components:
   - {fileID: 1835148247299863099}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1089052686951688774}
   iFramesDuration: 2
   numberOfFlashes: 3
   deathSound: {fileID: 8300000, guid: 9f07af5abd167fa46985853e20c2ce9a, type: 3}
   hurtSound: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
+--- !u!114 &4188083936842116867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835148247299863100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0320f77fddce14fa669bf6584549ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpoint: {fileID: 8300000, guid: 8ff2a2d7e79f81c40ac447512f879374, type: 3}
 --- !u!95 &1835148247299863098
 Animator:
   serializedVersion: 4

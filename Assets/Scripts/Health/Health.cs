@@ -54,8 +54,9 @@ public class Health : MonoBehaviour
                 foreach (Behaviour component in components)
                     component.enabled = false;
 
-                anim.SetBool("Grounded", true);
+                anim.SetBool("grounded", true);
                 anim.SetTrigger("die");
+
                 dead = true;
                 SoundManager.instance.PlaySound(deathSound);
                 //rigidbody2D.velocity = Vector2.zero;
@@ -68,22 +69,22 @@ public class Health : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
 
-    public void Respawn()
-    {
-        
-        dead = false;
-        AddHealth(startingHealth);
-        anim.ResetTrigger("die");
-        anim.Play("Idle");
-        StartCoroutine(Invunerability());
+    //public void Respawn()
+    //{
+    //    dead = false;
+    //    AddHealth(startingHealth);
+    //    anim.ResetTrigger("die");
+    //    anim.Play("Idle");
+    //    StartCoroutine(Invunerability());
 
-        foreach (Behaviour component in components)
-            component.enabled = true;
-        transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x) * 5, transform.localScale.y, transform.localScale.z);
-    }
+    //    foreach (Behaviour component in components)
+    //        component.enabled = true;
+    //    transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x) * 5, transform.localScale.y, transform.localScale.z);
+    //}
 
     private IEnumerator Invunerability()
     {
+        invulnerable = true;
         Physics2D.IgnoreLayerCollision(6, 7, true);
 
         for (int i = 0; i < numberOfFlashes; i++)
@@ -94,10 +95,23 @@ public class Health : MonoBehaviour
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
         Physics2D.IgnoreLayerCollision(6, 7, false);
+        invulnerable = false;
     }
 
     private void Deactivate()
     {
         gameObject.SetActive(false);
+    }
+
+    public void Respawn()
+    {
+        AddHealth(startingHealth);
+        anim.ResetTrigger("die");
+        anim.Play("Idle");
+        StartCoroutine(Invunerability());
+
+        //Activate all attached component classes
+        foreach (Behaviour component in components)
+            component.enabled = true;
     }
 }

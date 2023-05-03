@@ -1,13 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using UnityEditor.Rendering;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    [Header ("Patrol Points")]
+    [Header("Patrol Points")]
     [SerializeField] private Transform leftEdge;
     [SerializeField] private Transform rightEdge;
 
@@ -30,6 +25,11 @@ public class EnemyPatrol : MonoBehaviour
     private void Awake()
     {
         initScale = enemy.localScale;
+    }
+
+    private void OnDisable()
+    {
+        anim.SetBool("Moving", false);
     }
 
     private void Update()
@@ -55,7 +55,7 @@ public class EnemyPatrol : MonoBehaviour
         anim.SetBool("Moving", false);
         idleTimer += Time.deltaTime;
 
-        if (idleTimer > idleDuration)     
+        if (idleTimer > idleDuration)
             movingLeft = !movingLeft;
     }
 
@@ -72,3 +72,4 @@ public class EnemyPatrol : MonoBehaviour
     }
 
 }
+

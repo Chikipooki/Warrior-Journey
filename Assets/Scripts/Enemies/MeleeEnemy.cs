@@ -19,11 +19,8 @@ public class MeleeEnemy : MonoBehaviour
     [Header("Attack Sound")]
     [SerializeField] private AudioClip attackSound;
 
-
-    private new Rigidbody2D rigidbody2D;
     private Animator anim;
     private Health playerHealth;
-
     private EnemyPatrol enemyPatrol;
 
     private void Awake()
@@ -54,8 +51,6 @@ public class MeleeEnemy : MonoBehaviour
 
         if (enemyPatrol != null)
             enemyPatrol.enabled = !PlayerInSight();
-
-        
     }
 
     private bool PlayerInSight()
@@ -77,7 +72,6 @@ public class MeleeEnemy : MonoBehaviour
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * -transform.localScale.x * colliderDistance, 
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
-
 
     private void DamagePlayer()
     {
