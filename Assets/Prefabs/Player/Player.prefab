@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 1835148247299863102}
   - component: {fileID: 1835148247299863109}
   - component: {fileID: 1835148247299863101}
-  - component: {fileID: 7840880265960946833}
-  - component: {fileID: 8205495029715699227}
+  - component: {fileID: 1089052686951688774}
   - component: {fileID: 1835148247299863099}
   - component: {fileID: 1835148247299863108}
   - component: {fileID: 1835148247299863098}
@@ -158,7 +157,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &7840880265960946833
+--- !u!114 &1089052686951688774
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,66 +166,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1835148247299863100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced81e6e413dac04db99df730342fdc7, type: 3}
+  m_Script: {fileID: 11500000, guid: 43f0aef5706d5864ba4eabce25b5b57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 550
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 0
-  m_WhatIsGround:
+  speed: 10
+  jumpPower: 22
+  coyoteTime: 0.25
+  extraJumps: 1
+  wallJumpX: 1500
+  wallJumpY: 750
+  groundLayer:
     serializedVersion: 2
-    m_Bits: 7095
-  m_GroundCheck: {fileID: 2344915405122035542}
-  m_CeilingCheck: {fileID: 4303228033983609026}
-  m_CrouchDisableCollider: {fileID: 1835148247299863102}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8205495029715699227}
-        m_TargetAssemblyTypeName: PlayerMovment, Assembly-CSharp
-        m_MethodName: OnLanding
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8205495029715699227}
-        m_TargetAssemblyTypeName: PlayerMovment, Assembly-CSharp
-        m_MethodName: OnCrouching
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8205495029715699227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835148247299863100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fed3cb93d21794544a2244f67a2983a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runSpeed: 40
-  controller: {fileID: 7840880265960946833}
-  joystick: {fileID: 0}
+    m_Bits: 256
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   jumpSound: {fileID: 8300000, guid: 4e349dc959014a845b9aa317d1c2b7f0, type: 3}
-  stepSound: {fileID: 8300000, guid: df7087e4d8a8bb546bc08ce68632903f, type: 3}
 --- !u!114 &1835148247299863099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,8 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 1
   attackRange: 1
-  attackDamage: 0
-  attackSound: {fileID: 0}
+  attackDamage: 3
+  attackSound: {fileID: 8300000, guid: 323e15cfe809e114ab92c9f4b25e8bc2, type: 3}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -262,8 +217,8 @@ MonoBehaviour:
   startingHealth: 3
   components:
   - {fileID: 1835148247299863099}
-  - {fileID: 8205495029715699227}
-  - {fileID: 7840880265960946833}
+  - {fileID: 0}
+  - {fileID: 0}
   iFramesDuration: 2
   numberOfFlashes: 3
   deathSound: {fileID: 8300000, guid: 9f07af5abd167fa46985853e20c2ce9a, type: 3}
