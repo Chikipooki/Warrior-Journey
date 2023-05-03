@@ -13,7 +13,7 @@ public class PlayerAttack : MonoBehaviour
     private float coolDownTimer = Mathf.Infinity;
 
     private Animator anim;
-    private PlayerMovment playerMovment;
+    private PlayerMovement playerMovement;
     public Transform attackPoint;
     
 
@@ -21,12 +21,14 @@ public class PlayerAttack : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        playerMovment = GetComponent<PlayerMovment>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.F) && coolDownTimer > attackCooldown)
+        //if (Input.GetKey(KeyCode.F) && coolDownTimer > attackCooldown)
+        //    Attack();
+        if (Input.GetMouseButton(0) && coolDownTimer > attackCooldown && playerMovement.canAttack())
             Attack();
 
         coolDownTimer += Time.deltaTime;
