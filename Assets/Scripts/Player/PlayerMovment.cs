@@ -14,6 +14,7 @@ public class PlayerMovment : MonoBehaviour
 
     [Header("SFX")]
     [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip stepSound;
 
     private void Awake()
     {
