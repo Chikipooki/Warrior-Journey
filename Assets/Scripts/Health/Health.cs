@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
 
     [Header("Health")]
     [SerializeField] private float startingHealth;
+    public float currentHealth { get; private set; }
     private Animator anim;
     private bool dead;
 
@@ -24,8 +25,6 @@ public class Health : MonoBehaviour
     [Header("Death Sound")]
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private AudioClip hurtSound;
-
-    public float currentHealth { get; private set; }
 
     private void Awake()
     {
@@ -69,18 +68,18 @@ public class Health : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
 
-    //public void Respawn()
-    //{
-    //    dead = false;
-    //    AddHealth(startingHealth);
-    //    anim.ResetTrigger("die");
-    //    anim.Play("Idle");
-    //    StartCoroutine(Invunerability());
+    public void Respawn()
+    {
+        dead = false;
+        AddHealth(startingHealth);
+        anim.ResetTrigger("die");
+        anim.Play("Idle");
+        StartCoroutine(Invunerability());
 
-    //    foreach (Behaviour component in components)
-    //        component.enabled = true;
-    //    transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x) * 5, transform.localScale.y, transform.localScale.z);
-    //}
+        //Activate all attached component classes
+        foreach (Behaviour component in components)
+            component.enabled = true;
+    }
 
     private IEnumerator Invunerability()
     {
@@ -101,17 +100,5 @@ public class Health : MonoBehaviour
     private void Deactivate()
     {
         gameObject.SetActive(false);
-    }
-
-    public void Respawn()
-    {
-        AddHealth(startingHealth);
-        anim.ResetTrigger("die");
-        anim.Play("Idle");
-        StartCoroutine(Invunerability());
-
-        //Activate all attached component classes
-        foreach (Behaviour component in components)
-            component.enabled = true;
     }
 }
