@@ -390,7 +390,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1919561759}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: UIMenu, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -559,7 +559,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1919561759}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: UIMenu, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -825,7 +825,6 @@ GameObject:
   - component: {fileID: 1526283084}
   - component: {fileID: 1526283081}
   - component: {fileID: 1526283080}
-  - component: {fileID: 1526283079}
   - component: {fileID: 1526283083}
   - component: {fileID: 1526283082}
   m_Layer: 0
@@ -835,21 +834,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1526283079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526283078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79890cb1cbcccc04a855e6a402361eec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damping: 1.5
-  offset: {x: 2, y: 1}
-  faceLeft: 0
 --- !u!81 &1526283080
 AudioListener:
   m_ObjectHideFlags: 0
@@ -970,8 +954,8 @@ GameObject:
   - component: {fileID: 1919561758}
   - component: {fileID: 1919561757}
   - component: {fileID: 1919561756}
-  - component: {fileID: 1919561755}
   - component: {fileID: 1919561759}
+  - component: {fileID: 1919561755}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -1070,7 +1054,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1919561754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 303db6eca3a576648900d9d1345a0051, type: 3}
+  m_Script: {fileID: 11500000, guid: c06a481f5d50cb0419f27b4ecd9ce30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverScreen: {fileID: 0}
