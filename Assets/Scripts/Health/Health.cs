@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour
-{   
-    //private new Rigidbody2D rigidbody2D;
-    private UIManager uiManager;
+{
+    private Rigidbody2D body;
 
     [Header("Health")]
     [SerializeField] private float startingHealth;
@@ -31,8 +30,7 @@ public class Health : MonoBehaviour
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        uiManager = FindObjectOfType<UIManager>();
-        //rigidbody2D = GetComponent<Rigidbody2D>();
+        body = GetComponent<Rigidbody2D>();
     }
 
     public void TakeDamage(float _damage)
@@ -50,16 +48,15 @@ public class Health : MonoBehaviour
         {
             if (!dead)
             {
+                //Deactivate all attached component classes
                 foreach (Behaviour component in components)
                     component.enabled = false;
 
                 anim.SetBool("grounded", true);
                 anim.SetTrigger("die");
-
+                body.bodyType = RigidbodyType2D.Static;
                 dead = true;
                 SoundManager.instance.PlaySound(deathSound);
-                //rigidbody2D.velocity = Vector2.zero;
-                //uiManager.GameOver();
             }
         }
     }
@@ -70,6 +67,7 @@ public class Health : MonoBehaviour
 
     public void Respawn()
     {
+        body.bodyType = RigidbodyType2D.Dynamic;
         dead = false;
         AddHealth(startingHealth);
         anim.ResetTrigger("die");

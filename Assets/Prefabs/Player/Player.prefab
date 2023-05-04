@@ -236,6 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpoint: {fileID: 8300000, guid: 8ff2a2d7e79f81c40ac447512f879374, type: 3}
+  RespawnCount: 2
 --- !u!95 &1835148247299863098
 Animator:
   serializedVersion: 4
