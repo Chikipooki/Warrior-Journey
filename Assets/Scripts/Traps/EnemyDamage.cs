@@ -13,5 +13,4 @@ public class EnemyDamage : MonoBehaviour
             collision.GetComponent<Health>().TakeDamage(damage);
         }
     }
-
 }

@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (coyoteCounter <= 0 && !onWall() && jumpCounter <= 0) return; 
+        if (coyoteCounter <= 0 && !onWall() && jumpCounter <= 0) return;
         //If coyote counter is 0 or less and not on the wall and don't have any extra jumps don't do anything
 
         SoundManager.instance.PlaySound(jumpSound);
