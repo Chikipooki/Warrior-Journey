@@ -26,8 +26,6 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKey(KeyCode.F) && coolDownTimer > attackCooldown)
-        //    Attack();
         if (Input.GetMouseButton(0) && coolDownTimer > attackCooldown && playerMovement.canAttack())
             Attack();
 
@@ -45,14 +43,7 @@ public class PlayerAttack : MonoBehaviour
         foreach (Collider2D enemy in hit)
         {
             enemy.GetComponent<Health>().TakeDamage(attackDamage);
-            Debug.Log("1 damage");
         }
-
-
-        //if (hit.collider != null)
-        //    playerHealth = hit.collider.GetComponent<Health>();
-
-        //return hit.collider != null;
     }
 
     private void OnDrawGizmosSelected()
