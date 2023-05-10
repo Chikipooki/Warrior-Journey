@@ -723,11 +723,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212812528}
   m_CullTransparentMesh: 1
---- !u!95 &273263465 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5290830623102606329, guid: 9a20d58fd2e8285438b4553375ba0c68, type: 3}
-  m_PrefabInstance: {fileID: 1940195536}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &273263471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5290830623102606333, guid: 9a20d58fd2e8285438b4553375ba0c68, type: 3}
@@ -1165,14 +1160,14 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: d48ba2b8def8a734b8f0797f3b40262e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a20d58fd2e8285438b4553375ba0c68, type: 3}
---- !u!95 &379111449 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5290830623102606329, guid: 9a20d58fd2e8285438b4553375ba0c68, type: 3}
-  m_PrefabInstance: {fileID: 379111448}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &379111450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5290830623102606333, guid: 9a20d58fd2e8285438b4553375ba0c68, type: 3}
+  m_PrefabInstance: {fileID: 379111448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &379111451 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 805046754228013254, guid: 9a20d58fd2e8285438b4553375ba0c68, type: 3}
   m_PrefabInstance: {fileID: 379111448}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &424925833
@@ -38964,7 +38959,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 107, y: 0}
-  m_SizeDelta: {x: 80, y: 80}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223329934
 MonoBehaviour:
@@ -39076,6 +39071,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2817084724831093902, guid: 02458a3c2b7a9e646a674e9b329f244c, type: 3}
   m_PrefabInstance: {fileID: 1297198057}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1300219932 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 805046754228013254, guid: 9a20d58fd2e8285438b4553375ba0c68, type: 3}
+  m_PrefabInstance: {fileID: 1940195536}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1304909413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39134,7 +39134,7 @@ PrefabInstance:
     - target: {fileID: 9150735052661049334, guid: d03e33b68ea973d4090679541d51a310, type: 3}
       propertyPath: anim
       value: 
-      objectReference: {fileID: 379111449}
+      objectReference: {fileID: 379111451}
     - target: {fileID: 9150735052661049334, guid: d03e33b68ea973d4090679541d51a310, type: 3}
       propertyPath: enemy
       value: 
@@ -44664,7 +44664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 752, y: 403}
+  m_AnchoredPosition: {x: 627, y: 491}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1730973183 stripped
@@ -45109,7 +45109,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 0.8862745}
+  m_Color: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 0}
   m_Origin: {x: 0, y: 0, z: 0}
   m_Size: {x: 72, y: 12, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -45810,7 +45810,7 @@ PrefabInstance:
     - target: {fileID: 9150735052661049334, guid: d03e33b68ea973d4090679541d51a310, type: 3}
       propertyPath: anim
       value: 
-      objectReference: {fileID: 273263465}
+      objectReference: {fileID: 1300219932}
     - target: {fileID: 9150735052661049334, guid: d03e33b68ea973d4090679541d51a310, type: 3}
       propertyPath: enemy
       value: 
