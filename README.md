@@ -7,19 +7,22 @@
 # Управление / Controls
 <center>[RUS]</center>
 
-⍇ - Движение персонажа влево.
-
+⍇ - Движение персонажа влево. 
 ⍈ - Движение персонажа вправо.
 
-Space -  Прыжок.
+ЛКМ - Аттака.
+
+Space -  Прыжок. Двойное нажатие - двойоной прыжок.
 
 <center>[ENG]</center>
 
 ⍇ - Moves character to the left.
-
 ⍈ - Moves character to the right.
 
-Space -  Jump.
+LMB - Attack.
+
+Space -  Jump. Double tap - double jump.
 
 # Игровой процесс / Game play
-![Alt Text](https://media2.giphy.com/media/Kp3G97X1ZpzOmr9h5e/giphy.gif?cid=790b7611fd807efd4c9038b9d9848066be01bb86c5188966&rid=giphy.gif&ct=g)
+![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmJydjRyd2t2ZjQ5MXFiYjkyOTBmaDhxYm52MTM4Mm50MDRkb2hseSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zd8yu6TZ3y5a4nRGCA/giphy-downsized-large.gif)
+
